@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Botón Programas Nacionales INTA</title>
+  <title>Botón Programas Nacionales</title>
   <style>
     * {
       box-sizing: border-box;
@@ -34,6 +34,7 @@
       position: relative;
       width: 100%;
       height: 100%;
+      margin-top: 10px; /* Margen superior añadido */
       border-radius: 18px;
       background: linear-gradient(155deg, #1b2636 0%, #0d1522 100%);
       border: 2px solid #2e3e55;
@@ -124,27 +125,12 @@
       z-index: 1;
     }
 
-    .inta-pn-badge {
-      display: inline-block;
-      font-size: 10px;
-      letter-spacing: 1.8px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #8da4c4;
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid #2e3e55;
-      padding: 3px 9px;
-      border-radius: 20px;
-      margin-bottom: 6px;
-      transition: all 0.35s ease;
-    }
-
     .inta-pn-title {
       margin: 0;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 600;
       color: #c9d6e6;
-      line-height: 1.25;
+      line-height: 1.3;
       letter-spacing: 0.3px;
       transition: color 0.35s ease;
     }
@@ -202,12 +188,6 @@
       filter: drop-shadow(0 0 4px rgba(216, 43, 56, 0.8));
     }
 
-    .inta-pn-card-wrapper:hover .inta-pn-badge {
-      color: #ffffff;
-      border-color: #0078d4;
-      background-color: rgba(0, 120, 212, 0.25);
-    }
-
     .inta-pn-card-wrapper:hover .inta-pn-title {
       color: #ffffff;
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
@@ -221,7 +201,7 @@
   </style>
 </head>
 <body>
-  <a href="https://intaarg.sharepoint.com/sites/DNAID/SitePages/Programas-Nacionales-INTA.aspx" target="_blank" rel="noopener noreferrer" class="inta-pn-card-wrapper" title="Ingresar a Programas Nacionales del INTA">
+  <a href="https://intaarg.sharepoint.com/sites/DNAID/SitePages/Programas-Nacionales-INTA.aspx" target="_blank" rel="noopener noreferrer" class="inta-pn-card-wrapper" title="Ingresar a Programas Nacionales">
     <div class="inta-pn-button">
       <div class="inta-pn-icon-container">
         <svg class="inta-pn-svg" viewBox="0 0 100 100">
@@ -240,7 +220,6 @@
         </svg>
       </div>
       <div class="inta-pn-text-group">
-        <span class="inta-pn-badge">INTA</span>
         <h3 class="inta-pn-title">Programas<br>Nacionales</h3>
       </div>
       <div class="inta-pn-status-bar"></div>
