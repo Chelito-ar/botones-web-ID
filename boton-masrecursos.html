@@ -70,3 +70,192 @@
       position: relative;
       width: 110px;
       height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .inta-pn-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Anillo exterior perimetral */
+    .inta-pn-svg-ring {
+      stroke: #33445c;
+      stroke-width: 2;
+      stroke-dasharray: 6 4;
+      fill: none;
+      transition: stroke 0.35s ease, stroke-width 0.35s ease;
+    }
+
+    /* Trazos orbitales y vectores de vinculación */
+    .inta-pn-svg-tracks {
+      stroke: #364761;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      fill: none;
+      transition: stroke 0.35s ease;
+    }
+
+    /* Estructuras base y capas de recursos */
+    .inta-pn-svg-base {
+      fill: #141e2e;
+      stroke: #415573;
+      stroke-width: 2.2;
+      stroke-linejoin: round;
+      transition: fill 0.35s ease, stroke 0.35s ease, filter 0.35s ease;
+    }
+
+    /* Niveles de soporte y banco de datos */
+    .inta-pn-svg-core {
+      fill: #223249;
+      stroke: #415573;
+      stroke-width: 1.8;
+      transition: fill 0.35s ease, stroke 0.35s ease;
+    }
+
+    /* Nodos satélite de conocimiento */
+    .inta-pn-svg-nodes {
+      fill: #607594;
+      transition: fill 0.35s ease, transform 0.35s ease;
+    }
+
+    /* Nodo activo / Hito de innovación (acento rojo sutil) */
+    .inta-pn-svg-accent {
+      fill: #7d2a32;
+      transition: fill 0.35s ease, filter 0.35s ease;
+    }
+
+    .inta-pn-text-group {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .inta-pn-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #c9d6e6;
+      line-height: 1.25;
+      letter-spacing: 0.3px;
+      transition: color 0.35s ease;
+    }
+
+    .inta-pn-status-bar {
+      width: 38px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #2b394e;
+      transition: all 0.35s ease;
+    }
+
+    /* =========================================
+       ESTADO ACTIVO / HOVER
+       ========================================= */
+
+    .inta-pn-card-wrapper:hover .inta-pn-button {
+      transform: translateY(-4px) scale(1.01);
+      border-color: #0078d4;
+      background: linear-gradient(155deg, #1e3047 0%, #101c2e 100%);
+      box-shadow: 0 10px 28px rgba(0, 120, 212, 0.28), 0 0 15px rgba(0, 120, 212, 0.2);
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-button::before {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-icon-container {
+      transform: scale(1.08);
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-svg-ring {
+      stroke: #0078d4;
+      stroke-width: 2.2;
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-svg-tracks {
+      stroke: #5ba3e0;
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-svg-base {
+      fill: #183354;
+      stroke: #0098ff;
+      filter: drop-shadow(0 0 6px rgba(0, 152, 255, 0.6));
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-svg-core {
+      fill: #264366;
+      stroke: #0098ff;
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-svg-nodes {
+      fill: #e1ecfa;
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-svg-accent {
+      fill: #d82b38;
+      filter: drop-shadow(0 0 5px rgba(216, 43, 56, 0.85));
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-title {
+      color: #ffffff;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .inta-pn-card-wrapper:hover .inta-pn-status-bar {
+      width: 55px;
+      background-color: #0098ff;
+      box-shadow: 0 0 10px #0098ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Reemplazá el href por la URL de destino de Más recursos I+D -->
+  <a href="https://intaarg.sharepoint.com/sites/DNAID/SitePages/Home.aspx" target="_blank" rel="noopener noreferrer" class="inta-pn-card-wrapper" title="Ingresar a Más recursos I+D">
+    <div class="inta-pn-button">
+      <div class="inta-pn-icon-container">
+        <svg class="inta-pn-svg" viewBox="0 0 100 100">
+          <!-- Anillo técnico exterior -->
+          <circle class="inta-pn-svg-ring" cx="50" cy="50" r="44" />
+
+          <!-- Conectores y vectores de vinculación I+D -->
+          <line class="inta-pn-svg-tracks" x1="50" y1="16" x2="50" y2="28" />
+          <line class="inta-pn-svg-tracks" x1="22" y1="50" x2="30" y2="50" />
+          <line class="inta-pn-svg-tracks" x1="70" y1="50" x2="78" y2="50" />
+          <line class="inta-pn-svg-tracks" x1="28" y1="72" x2="38" y2="64" />
+          <line class="inta-pn-svg-tracks" x1="72" y1="72" x2="62" y2="64" />
+
+          <!-- Plataforma/Capas de recursos y bases de datos apiladas -->
+          <rect class="inta-pn-svg-core" x="32" y="66" width="36" height="8" rx="3" />
+          <rect class="inta-pn-svg-base" x="26" y="52" width="48" height="11" rx="3.5" />
+
+          <!-- Trazas orbitales de ciencia e investigación (I+D) -->
+          <ellipse class="inta-pn-svg-tracks" cx="50" cy="38" rx="20" ry="9" transform="rotate(-25 50 38)" />
+          <ellipse class="inta-pn-svg-tracks" cx="50" cy="38" rx="20" ry="9" transform="rotate(25 50 38)" />
+
+          <!-- Núcleo central de investigación y conocimiento -->
+          <circle class="inta-pn-svg-base" cx="50" cy="38" r="7" />
+          <circle class="inta-pn-svg-nodes" cx="50" cy="38" r="3" />
+
+          <!-- Nodos de desarrollo periférico -->
+          <circle class="inta-pn-svg-nodes" cx="30" cy="30" r="3" />
+          <circle class="inta-pn-svg-nodes" cx="68" cy="46" r="3" />
+          <circle class="inta-pn-svg-nodes" cx="50" cy="16" r="3.5" />
+
+          <!-- Nodo activo de innovación (Acento rojo institucional) -->
+          <circle class="inta-pn-svg-accent" cx="70" cy="30" r="4.5" />
+        </svg>
+      </div>
+      <div class="inta-pn-text-group">
+        <h3 class="inta-pn-title">Más recursos<br>I+D</h3>
+      </div>
+      <div class="inta-pn-status-bar"></div>
+    </div>
+  </a>
+</body>
+</html>
